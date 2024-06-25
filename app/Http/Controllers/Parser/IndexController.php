@@ -28,7 +28,7 @@ class IndexController
 
                 $result = Parser::getAllByFilter($queryParams, $sqlFilter);
             } else {
-                $result = Parser::getAll($queryParams);
+                $result = Parser::getAll();
             }
 
             $response->getBody()->write(json_encode($result));
